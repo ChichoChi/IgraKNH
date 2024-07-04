@@ -39,7 +39,7 @@ elif(p_move == rock and ai_move == paper) or (p_move == paper and ai_move == sci
 tab = input("Do u want to play again : yes  or no : ")
 
     if tab == "yes":
-        again == True
+        again = True
     elif tab == "no":
         again = False
         print("Thanks for playing:) ")
