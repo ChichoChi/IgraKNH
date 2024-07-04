@@ -1,49 +1,49 @@
 import random
 
-while(again):
-rock = 'Rock'
-paper = 'Paper'
-scissors = 'Scissors'
+again  = True
 
-p_move = input("Choose, [r]ock, [p]aper or [s]cissors : ")
+while (again):
+        rock = 'Rock'
+        paper = 'Paper'
+        scissors = 'Scissors'
 
-if p_move == "r":
-    p_move = rock
-elif p_move == "p":
-    p_move = paper
-elif p_move == "s":
-    p_move = scissors
-else:
-    print("Invalid Input. Try again...")
+        izbor = input("Choose, [r]ock, [p]aper or [s]cissors : ")
 
-ai_move = ""
-computer_random_number = random.randint(1, 3)
+        if izbor == "r":
+            izbor = rock
+        elif izbor == "p":
+            izbor = paper
+        elif izbor== "s":
+            izbor = scissors
+        else:
+            print("Invalid Input. Try again...")
 
-if computer_random_number == 1:
-    ai_move = rock
-    print("The computer chose Rock")
-elif computer_random_number == 2:
-    ai_move = paper 
-    print("The computer chose Paper")
-else:
-    ai_move = scissors
-    print("The computer chose Scissors")
+        pc_move = ""
+        computer_random_number = random.randint(1, 3)
 
-if(p_move == rock and ai_move == scissors) or (p_move == paper and ai_move == rock) or (p_move == scissors and ai_move == paper):
-    print("You win!")
-elif(p_move == rock and ai_move == rock) or (p_move == paper and ai_move == paper) or (p_move == scissors and ai_move == scissors):
-   print("Draw!")
-elif(p_move == rock and ai_move == paper) or (p_move == paper and ai_move == scissors) or (p_move == scissors and ai_move == rock):
-   print("You lose!")
+        if computer_random_number == 1:
+            pc_move = rock
+            print("The computer chose rock")
+        elif computer_random_number == 2:
+            pc_move = paper
+            print("The computer chose paper")
+        else:
+            pc_move = scissors
+            print("The computer chose scissors")
 
-tab = input("Do u want to play again : yes  or no : ")
+        if(izbor == rock and pc_move == scissors) or (izbor == paper and pc_move == rock) or (pc_move == scissors and pc_move == paper):
+            print("You win!")
+        elif(izbor == rock and pc_move == rock) or (izbor == paper and pc_move == paper) or (izbor == scissors and pc_move == scissors):
+            print("Draw!")
+        elif(izbor == rock and pc_move == paper) or (izbor == paper and pc_move == scissors) or (izbor == scissors and pc_move == rock):
+            print("You lose!")
+        tab = input("Do u want to play again : yes  or no : ")
 
-    if tab == "yes":
-        again = True
-    elif tab == "no":
-        again = False
-        print("Thanks for playing:) ")
-    else :
-        again = False
-        print("wrong input. Bye ")
-
+        if tab == "yes":
+            again == True
+        elif tab == "no":
+            again = False
+            print("Thanks for playing ")
+        else :
+            again = False
+            print("wrong input. Bye ")
