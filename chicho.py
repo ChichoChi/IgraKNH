@@ -1,6 +1,6 @@
 import random
 
-
+while(again):
 rock = 'Rock'
 paper = 'Paper'
 scissors = 'Scissors'
@@ -35,3 +35,15 @@ elif(p_move == rock and ai_move == rock) or (p_move == paper and ai_move == pape
    print("Draw!")
 elif(p_move == rock and ai_move == paper) or (p_move == paper and ai_move == scissors) or (p_move == scissors and ai_move == rock):
    print("You lose!")
+
+tab = input("Do u want to play again : yes  or no : ")
+
+    if tab == "yes":
+        again == True
+    elif tab == "no":
+        again = False
+        print("Thanks for playing:) ")
+    else :
+        again = False
+        print("wrong input. Bye ")
+
